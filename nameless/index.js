@@ -22,7 +22,7 @@ var DrupalthemeGenerator = module.exports = function DrupalthemeGenerator(args, 
   this.themeDesc = this.env.themeDesc || 'nameless theme description';
   this.themeMachineName = this.env.themeMachineName || 'nameless';
 
-  this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
+  this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, 'package.json')));
 };
 
 util.inherits(DrupalthemeGenerator, yeoman.generators.Base);
