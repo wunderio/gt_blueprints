@@ -95,41 +95,41 @@ DrupalthemeGenerator.prototype.app = function app() {
 };
 
 DrupalthemeGenerator.prototype.themeStyles = function themeStyles() {
-  this.template('tpl/_style.css', 'css/style.css');
-  this.template('tpl/_editor.css', 'css/editor.css');
+  this.template('_style.css', 'css/style.css');
+  this.template('_editor.css', 'css/editor.css');
   if (this.styleCOMPASS || this.compassBootstrap || this.frondly) {
-    this.template('tpl/_config.rb', 'config.rb');
+    this.template('_config.rb', 'config.rb');
   }
   if (this.styleSASS || this.styleCOMPASS || this.compassBootstrap || this.frondly) {
-    this.template('tpl/__config.scss', 'sass/_config.scss');
-    this.template('tpl/_editor.scss', 'sass/editor.scss');
-    this.template('tpl/_style.scss', 'sass/style.scss');
+    this.template('__config.scss', 'sass/_config.scss');
+    this.template('_editor.scss', 'sass/editor.scss');
+    this.template('_style.scss', 'sass/style.scss');
   }
 };
 
 DrupalthemeGenerator.prototype.themeScripts = function themeScripts() {
   var tn = this.themeMachineName;
-  this.template('tpl/_javascript.js', 'js/' + tn + '.js');
+  this.template('_javascript.js', 'js/' + tn + '.js');
 };
 
 DrupalthemeGenerator.prototype.themeInfo = function themeInfo() {
   var tn = this.themeMachineName;
-  this.template('tpl/_theme.info', tn + '.info');
+  this.template('_theme.info', tn + '.info');
 };
 
 DrupalthemeGenerator.prototype.themeTemplates = function themeTemplates() {
-  this.template('tpl/_template.php', 'template.php');
-  this.directory('tpl/templates', 'templates');
+  this.template('_template.php', 'template.php');
+  this.directory('templates', 'templates');
 };
 
 DrupalthemeGenerator.prototype.themeImages = function themeImages() {
-  this.copy('tpl/_screenshot.png', 'screenshot.png');
-  this.copy('tpl/_logo.png', 'logo.png');
+  this.copy('_screenshot.png', 'screenshot.png');
+  this.copy('_logo.png', 'logo.png');
 };
 
 DrupalthemeGenerator.prototype.bowerFiles = function bowerFiles() {
-  this.template('tpl/_bower.json', 'bower.json');
-  this.copy('tpl/bowerrc', '.bowerrc');
+  this.template('_bower.json', 'bower.json');
+  this.copy('bowerrc', '.bowerrc');
 };
 
 DrupalthemeGenerator.prototype.packageFiles = function packageFiles() {
@@ -137,5 +137,5 @@ DrupalthemeGenerator.prototype.packageFiles = function packageFiles() {
     "name": this.themeMachineName,
     "version": "0.0.0"
   };
-  this.template('tpl/_package.json', 'package.json');
+  this.template('_package.json', 'package.json');
 };
